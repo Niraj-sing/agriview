@@ -21,7 +21,7 @@
     }
   }
   async function postJSON(endpoint, payload) {
-    var response = await fetch(API_BASE + endpoint, {
+   var response = await fetch(API_BASE + "/api" + endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
       body: JSON.stringify(payload)
