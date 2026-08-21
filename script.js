@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var API_BASE = window.AGRIVIEW_API_BASE || "https://api.agriview.in/api";
+ var API_BASE = "https://api.agriview.in/api";
 
   function byId(id) { return document.getElementById(id); }
   function setStatus(el, message, type) {
