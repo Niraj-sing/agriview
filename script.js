@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var API_BASE = window.AGRIVIEW_API_BASE || "https://api.agriview.in";
+  var API_BASE = window.AGRIVIEW_API_BASE || "https://api.agriview.in/api";
 
   function byId(id) { return document.getElementById(id); }
   function setStatus(el, message, type) {
@@ -21,7 +21,7 @@
     }
   }
   async function postJSON(endpoint, payload) {
-   var response = await fetch(API_BASE + "/api", {
+   var response = await fetch(API_BASE + endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
       body: JSON.stringify(payload)
